@@ -5,20 +5,17 @@ import java.io.IOException;
 public class USBDaliController  extends ADaliController {
 
 	public void close() throws IOException {
-		// TODO Auto-generated method stub
-		
+		Log.info("Close USB Dali controller");
 	}
 
 	@Override
 	void open() throws IOException {
-		// TODO Auto-generated method stub
-		
+		Log.info("Open USB Dali controller");
 	}
 
 	@Override
 	void writeToDriver(char c) throws IOException {
-		// TODO Auto-generated method stub
-		
+		Log.info("Write "+c);
 	}
 
 }
