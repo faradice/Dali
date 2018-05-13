@@ -14,7 +14,7 @@ public abstract class ADaliController implements Closeable {
 			DaliUtil.delay(500);
 			daliMax(i+"");
 		}
-		daliOff("FE");
+		daliOff("FE"); 
 	}
 	
 	public void daliMax(String addr) throws Exception {
