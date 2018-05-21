@@ -7,7 +7,7 @@ import java.io.IOException;
  * 
  * Supports a connection to a standard Dali controller using USB interface on Rasperry Pi
  * 
- * Information regarding hardwere plugin:
+ * Information regarding hardware plugin:
  * https://ubuntuforums.org/showthread.php?t=1716756
  *
  * Without USB cable connected to pi:  
