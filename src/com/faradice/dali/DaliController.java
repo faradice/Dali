@@ -6,10 +6,11 @@ import java.io.IOException;
 public class DaliController extends ADaliController  implements Closeable {
 	public static String DALI_COMMAND_FILE = "NewDaliCommand";
 	
-	public static String DAL_MAX = "";
-	public static String DALI_MEDIUM = "";
 	public static String DALI_MAX = "";
-	public static String DAL_MEDIUM_LOW = "";
+	public static String DALI_MEDIUM = "";
+	public static String DALI_OFF = "0130313030313046463030454617";
+	public static String DALI_MEDIUM_LOW = "";
+	public static String DALI_LOW = "";
 
 	
 	@Override
@@ -24,32 +25,31 @@ public class DaliController extends ADaliController  implements Closeable {
 	
 	@Override
 	public void daliMax(String addr) throws Exception {
-		sendCommand(DAL_MAX);
+		sendDaliCommand(DALI_MAX);
 	}
 	
 	@Override
 	public void daliMed(String addr) throws Exception {
-		sendCommand(DALI_MEDIUM);
+		sendDaliCommand(DALI_MEDIUM);
 	}
 
 	@Override
 	public void daliMedLow(String addr) throws Exception {
-		sendCommand(DAL_MEDIUM_LOW);
+		sendDaliCommand(DALI_MEDIUM_LOW);
 	}
 
 	@Override
 	public void daliLow(String addr) throws Exception {
+		sendDaliCommand(DALI_LOW);
 	}
 	
 	@Override
 	public void daliOff(String addr) throws Exception {
+		sendDaliCommand(DALI_OFF);
 	}
 	
-	@Override
-	public void daliOff(short address) throws Exception {
-	}
 	
-	public void sendCommand(String msg) throws Exception {
+	public void sendDaliCommand(String msg) throws Exception {
 		System.out.println("Write cmd to dali:");
 		DaliUtil.delay(50);
 		FaraFiles.deleteFile(DALI_COMMAND_FILE);
@@ -58,10 +58,6 @@ public class DaliController extends ADaliController  implements Closeable {
 
 	@Override
 	public void toDali(String msg) throws Exception {
-		if (msg == null || msg.length() < 1) {
-			return;
-		}
-		sendCommand(msg);
 	}
 	
 	/**
