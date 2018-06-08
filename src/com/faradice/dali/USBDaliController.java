@@ -21,7 +21,7 @@ import java.io.IOException;
  * 
  */
 
-public class USBDaliController  extends ADaliController {
+public class USBDaliController extends ADaliController {
 
 	public void close() throws IOException {
 		Log.info("Close USB Dali controller");
