@@ -57,6 +57,7 @@ public class DaliController extends ADaliController  implements Closeable {
 
 	@Override
 	public void toDali(String msg) throws Exception {
+		throw new Exception ("Invalid cmd"+msg+" for this controller. Use method sendDaliCommand");
 	}
 	
 	/**
