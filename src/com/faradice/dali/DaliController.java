@@ -8,7 +8,7 @@ public class DaliController extends ADaliController  implements Closeable {
 	public static String DALI_MAX = "0130313030313046463035454117";
 	public static String DALI_MEDIUM = "01s30313030313046463036453917";
 	public static String DALI_OFF = "0130313030313046463030454617";
-	public static String DALI_MEDIUM_LOW = "";
+	public static String DALI_MEDIUM_LOW = "01s30313030313046463036453917"; // TODO
 	public static String DALI_LOW = "01303130303130s46463036453917";
 
 	
